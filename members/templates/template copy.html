@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+<body>
+
+<!-- {% for x in fruits %}
+  <h1>{{ x }}</h1>
+{% endfor %} -->
+
+<!-- <p>In views.py you can see what the fruits variable looks like.</p> -->
+
+<!-- <h1>Hello {{ firstname }} {{ lastname}}, how are you?</h1>
+
+{% with firstname="Tobias" %}
+  <h1>Hello {{ firstname }}, how are you?</h1>
+{% endwith %} -->
+
+<!-- <ul>
+  {% for x in mymembers %}
+    <li>{{ x.firstname }}</li>
+  {% endfor %}
+</ul> -->
+
+<!-- {% if greeting == 1 %}
+  <h1>Hello</h1>
+{% elif greeting == 2 %}
+  <h1>Welcome</h1>
+{% endif %} 
+
+<p>In views.py you can see what the greeting variable looks like.</p> -->
+
+<!-- <table border='2'>
+  <tr bgcolor="green">
+      <th>ID</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+  </tr>
+  {% for x in mymembers %}
+    <tr>
+      <td>{{ x.id }}</td>
+      <td>{{ x.firstname }}</td>
+      <td>{{ x.lastname }}</td>
+    </tr>
+  {% endfor %}
+</table> -->
+
+<!-- <p>The queryset object:</p>
+
+{{ mymembers }}
+
+<p>Loop through the items:</p>
+
+<table border='1'>
+  <tr>
+    <th>Firstname</th>
+  </tr>
+  {% for x in mymembers %}
+    <tr>
+      <td>{{ x }}</td>
+    </tr>
+  {% endfor %}
+</table> -->
+
+
+<p>The queryset object:</p>
+
+{{ mymembers }}
+
+<p>Loop through the items:</p>
+
+<table border='1'>
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Phone</th>
+    <th>Joined On</th>
+  </tr>
+  {% for x in mymembers %}
+    <tr>
+      <td>{{ x.id }}</td>
+      <td>{{ x.firstname }}</td>
+      <td>{{ x.lastname }}</td>
+      <td>{{ x.phone }}</td>
+      <td>{{ x.joined_date }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
